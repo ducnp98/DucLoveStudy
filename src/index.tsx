@@ -4,7 +4,8 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import RouterScreen from "./RouterComponent/RouterScreen";
+import BasicKnowledgeScreen from "./BasicKnowledge/BasicKnowledge";
+import BasicCss from "./BasicCss/BasicCss";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -20,12 +21,16 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "router",
-    element: <RouterScreen />,
+    path: "basic-knowledge",
+    element: <BasicKnowledgeScreen />,
+  },
+  {
+    path: "basic-css",
+    element: <BasicCss />,
   },
   {
     path: "*",
-    element: <RouterScreen />,
+    element: <></>,
   },
 ]);
 
